@@ -31,5 +31,10 @@ pipeline {
                 }
             }
         }
+        post {
+            always {
+                 archiveArtifacts artifacts: '/app/app.jar', fingerprint: true
+            }
+        }
     }  
 } 
